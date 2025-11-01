@@ -83,10 +83,10 @@ Chaque microservice expose correctement ses propres endpoints REST, validant leu
 Toutes les requêtes externes doivent passer par l'API Gateway (port `8888`), qui route le trafic vers les services internes appropriés.
 
 **Liste des clients via la passerelle :** `http://localhost:8888/CUSTOMER-SERVICE/api/customers`
-![Accès aux clients via la passerelle](screenshots/06-gateway-accessing-customers.png)
+![Accès aux clients via la passerelle](screenshots/06-gateway-accessing-customers.PNG)
 
 **Liste des produits via la passerelle :** `http://localhost:8888/INVENTORY-SERVICE/api/products`
-![Accès aux produits via la passerelle](screenshots/05-gateway-accessing-products.png)
+![Accès aux produits via la passerelle](screenshots/05-gateway-accessing-products.PNG)
 
 ### c. Persistance des Données (Base de Données H2)
 
@@ -119,7 +119,7 @@ Pour répondre à cette seule requête, le `billing-service` :
 
 Le résultat est un objet JSON unique et cohérent qui démontre la parfaite collaboration entre les microservices.
 
-![Facture Complète avec Client et Produits](screenshots/12-final-result-full-bill.png)
+![Facture Complète avec Client et Produits](screenshots/12-final-result-full-bill.PNG)
 
 ---
 
