@@ -3,12 +3,12 @@
 Ce projet a été réalisé dans le cadre du cours de JEE et Systèmes Avancées. Il s'agit d'une application de e-commerce backend entièrement basée sur une architecture microservices, utilisant l'écosystème Spring Boot et Spring Cloud pour assurer la robustesse, la scalabilité et la maintenance.
 
 ## Table des Matières
-1. [Architecture Globale](#architecture-globale)
-2. [Stack Technologique](#stack-technologique)
-3. [Guide de Lancement](#guide-de-lancement)
-4. [Validation des Composants de l'Architecture](#validation-des-composants-de-larchitecture)
-5. [Démonstration des Endpoints et Fonctionnalités](#démonstration-des-endpoints-et-fonctionnalités)
-6. [Auteur](#auteur)
+1. [Architecture Globale](#1-architecture-globale)
+2. [Stack Technologique](#2-stack-technologique)
+3. [Guide de Lancement](#3-guide-de-lancement)
+4. [Validation des Composants de l'Architecture](#4-validation-des-composants-de-larchitecture)
+5. [Démonstration des Endpoints et Fonctionnalités](#5-démonstration-des-endpoints-et-fonctionnalités)
+6. [Auteur](#6-auteur)
 
 ---
 
