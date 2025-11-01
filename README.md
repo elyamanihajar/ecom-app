@@ -51,7 +51,7 @@ Cette section prouve que les piliers de l'architecture sont fonctionnels.
 
 Le `config-server` (port 9999) expose bien la configuration pour chaque service. Ici, la configuration pour `customer-service` est récupérée depuis le dépôt Git.
 
-![Config Server délivre la configuration](screenshots/09-config-server-customer-service-default.png)
+![Config Server délivre la configuration](screenshots/09-config-server-customer-service-default.PNG)
 
 Le `customer-service` charge ensuite cette configuration au démarrage, ce qui est vérifié via des endpoints de test qui affichent les valeurs chargées (paramètres globaux et spécifiques).
 
