@@ -38,8 +38,8 @@ Pour lancer l'application, il est **crucial** de démarrer les services dans l'o
 1.  `discovery-service` (port 8761)
 2.  `config-server` (port 9999)
 3.  `inventory-service`, `customer-service`
-4.  `billing-service`
-5.  `gateway-service` (port 8888)
+4.  `gateway-service` (port 8888)
+5.  `billing-service`
 
 ---
 
