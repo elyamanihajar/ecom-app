@@ -1,6 +1,6 @@
 # Projet : Application E-commerce en Architecture Microservices
 
-Ce projet a été réalisé dans le cadre du cours de JEE et Systèmes Avancées. Il s'agit d'une application de e-commerce backend entièrement basée sur une architecture microservices, utilisant l'écosystème Spring Boot et Spring Cloud pour assurer la robustesse, la scalabilité et la maintenance.
+Ce projet est une application de e-commerce complète, composée d'un backend en architecture microservices et d'une interface utilisateur frontend développée avec Angular. Il a été réalisé dans le cadre du cours de JEE et Systèmes Avancés.
 
 ## Table des Matières
 1. [Architecture Globale](#1-architecture-globale)
@@ -8,7 +8,8 @@ Ce projet a été réalisé dans le cadre du cours de JEE et Systèmes Avancées
 3. [Guide de Lancement](#3-guide-de-lancement)
 4. [Validation des Composants de l'Architecture](#4-validation-des-composants-de-larchitecture)
 5. [Démonstration des Endpoints et Fonctionnalités](#5-démonstration-des-endpoints-et-fonctionnalités)
-6. [Auteur](#6-auteur)
+6. [Interface Frontend (Angular)](#6-interface-frontend-angular)
+7. [Auteur](#7-auteur)
 
 ---
 
@@ -123,7 +124,25 @@ Le résultat est un objet JSON unique et cohérent qui démontre la parfaite col
 
 ---
 
-## 6. Auteur
+## 6. Interface Frontend (Angular)
+
+Le frontend est une application monopage qui offre une interface utilisateur pour interagir avec les données du backend.
+
+### a. Liste des Clients
+L'application affiche la liste de tous les clients récupérés depuis le customer-service.
+![Liste des clients](screenshots/01-front-customers.PNG)
+
+### b. Commandes par Client
+En cliquant sur "Orders", l'utilisateur peut voir toutes les commandes passées par un client spécifique.
+![Liste des orders d'un client spécifique](screenshots/02-front-customer-orders.PNG)
+
+### c. Détails d'une Commande
+La vue détaillée d'une commande affiche les informations du client et la liste des produits commandés, avec les quantités et les prix, en agrégeant les données de plusieurs microservices.
+![Liste des order Details](screenshots/03-front-order-details.PNG)
+
+---
+
+## 7. Auteur
 
 *   **Nom** : Hajar ELYAMANI
 *   **Classe** : 5IIR
