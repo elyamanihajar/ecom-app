@@ -23,4 +23,12 @@ public class Bill {
     private List<ProductItem> productItems = new ArrayList<>();
     @Transient
     private Customer customer;
+
+    public double getTotal() {
+        double total = 0;
+        for (ProductItem productItem : productItems) {
+            total += productItem.getProduct().getPrice() * productItem.getQuantity();
+        }
+        return total;
+    }
 }

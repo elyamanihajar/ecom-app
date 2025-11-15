@@ -41,6 +41,11 @@ public class BillingServiceApplication {
                     .customerId(customer.getId())
                     .build();
             billRepository.save(bill);
+            Bill bill2 = Bill.builder()
+                    .billingDate(new Date())
+                    .customerId(customer.getId())
+                    .build();
+            billRepository.save(bill2);
             products.forEach(product -> {
                 ProductItem productItem = ProductItem.builder()
                         .bill(bill)
@@ -49,6 +54,13 @@ public class BillingServiceApplication {
                         .unitPrice(product.getPrice())
                         .build();
                 productItemRepository.save(productItem);
+                ProductItem productItem2 = ProductItem.builder()
+                        .bill(bill2)
+                        .productId(product.getId())
+                        .quantity(1+new Random().nextInt(10))
+                        .unitPrice(product.getPrice())
+                        .build();
+                productItemRepository.save(productItem2);
             });
         });
         return args -> {
