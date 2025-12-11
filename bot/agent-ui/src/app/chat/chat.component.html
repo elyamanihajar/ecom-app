@@ -1,0 +1,24 @@
+<div class="p-3">
+  <div class="card-body">
+    <label style="display: block" class="form-label">Ask your question :</label>
+    <input
+      [(ngModel)]="query"
+      style="width: 70%; display: inline" class="form-control m-2" type="text">
+    <button
+      (click)="askAgent()"
+      style="display: inline" class="btn btn-outline-primary m-2">Send</button>
+
+    @if (progress==true){
+      <div class="spinner-border text-primary" role="status">
+        <span class="visually-hidden">Loading...</span>
+      </div>
+    }
+
+  </div>
+  <div class="card-body">
+    @if (response){
+      <markdown [data]="response"></markdown>
+    }
+
+  </div>
+</div>

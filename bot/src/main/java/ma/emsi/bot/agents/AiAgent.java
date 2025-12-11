@@ -2,6 +2,7 @@ package ma.emsi.bot.agents;
 
 import org.springframework.ai.chat.client.ChatClient;
 import org.springframework.ai.chat.client.advisor.MessageChatMemoryAdvisor;
+import org.springframework.ai.chat.client.advisor.SimpleLoggerAdvisor;
 import org.springframework.ai.chat.memory.ChatMemory;
 import org.springframework.ai.support.ToolCallbacks;
 import org.springframework.ai.tool.ToolCallback;
@@ -30,6 +31,7 @@ public class AiAgent {
                         Si aucun contexte n'est fourni, répond avec JE ME SAIS PAS.
                         """)
                 .defaultAdvisors(MessageChatMemoryAdvisor.builder(memory).build())
+                .defaultAdvisors(new SimpleLoggerAdvisor())
                 .defaultToolCallbacks(tools)
                 .build();
     }
