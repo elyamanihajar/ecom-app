@@ -17,7 +17,7 @@ import java.util.List;
 
 @Component
 public class DocumentIndexor {
-    @Value("classpath:/pdfs/rapport.pdf")
+    @Value("classpath:/pdfs/Resume.pdf")
     private Resource pdf;
     @Value("store.json")
     private String fileStore;
@@ -25,17 +25,18 @@ public class DocumentIndexor {
     @Bean
     public SimpleVectorStore getVectorStore(EmbeddingModel embeddingModel) {
         SimpleVectorStore vectorStore = SimpleVectorStore.builder(embeddingModel).build();
-        Path path = Path.of("src", "main", "resources", "store");
+        Path path = Path.of("bot","src", "main", "resources", "store");
         File file = new File(path.toFile(), fileStore);
         if (!file.exists()) {
             PagePdfDocumentReader pdfDocumentReader = new PagePdfDocumentReader(pdf);
             List<Document> documents = pdfDocumentReader.get();
             TextSplitter textSplitter=new TokenTextSplitter();
-            for (Document document : documents) {
+            List<Document> chunks = textSplitter.apply(documents);
+            vectorStore.add(chunks);
+            vectorStore.save(file);
 
-            }
-
-        }
+        }else
+            vectorStore.load(file);
         return vectorStore;
     }
 }
