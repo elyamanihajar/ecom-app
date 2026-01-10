@@ -9,7 +9,8 @@ Ce projet est une application de e-commerce complète, composée d'un backend en
 4. [Validation des Composants de l'Architecture](#4-validation-des-composants-de-larchitecture)
 5. [Démonstration des Endpoints et Fonctionnalités](#5-démonstration-des-endpoints-et-fonctionnalités)
 6. [Interface Frontend (Angular)](#6-interface-frontend-angular)
-7. [Auteur](#7-auteur)
+7. [Assistant Intelligent (Chatbot IA)](#7-assistant-intelligent-chatbot-ia)
+8. [Auteur](#8-auteur)
 
 ---
 
@@ -141,8 +142,27 @@ La vue détaillée d'une commande affiche les informations du client et la liste
 ![Liste des order Details](screenshots/03-front-order-details.PNG)
 
 ---
+## 7. Assistant Intelligent (Chatbot IA)
 
-## 7. Auteur
+Une fonctionnalité avancée d'intelligence artificielle a été intégrée au projet pour permettre aux utilisateurs d'interagir avec les données des microservices en langage naturel. Cet assistant peut répondre à des questions complexes sur les employés, les salaires et d'autres données métier.
+
+### a. Interface Chat Web
+L'application expose un endpoint de chat (`/chat`) qui utilise un moteur de traitement du langage naturel (NLP) pour interpréter les requêtes de l'utilisateur et retourner les informations structurées provenant du backend.
+
+**Exemple de requête :** `tous les employés`
+![Interface Chat Web](screenshots/bot-employes.PNG)
+
+### b. Intégration Telegram (EmsiAiBot)
+Le chatbot est également accessible via **Telegram**. Grâce à un Bot Telegram connecté au service de chat, les administrateurs ou utilisateurs peuvent consulter les données en temps réel directement depuis leur mobile.
+
+*   **Commandes supportées :** Demande de liste globale, détails par nom (ex: "le salaire de hajar"), statistiques d'ancienneté.
+*   **Formatage :** Les réponses sont formatées en Markdown pour une lecture claire et structurée.
+
+![Chatbot Telegram EmsiAiBot](screenshots/bot-telegram.PNG)
+
+---
+
+## 8. Auteur
 
 *   **Nom** : Hajar ELYAMANI
 *   **Classe** : 5IIR
